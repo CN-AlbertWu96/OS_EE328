@@ -1,0 +1,24 @@
+Homework 3, due 
+Problem 1. 
+This homework revisits the idea of superclass/subclass, polymorphism. And study how to use Arrays.sort(). Remember you need to implement Comparable or Comparator to sort your object array.
+
+Description
+ Write a superclass Worker and subclasses HourlyWorker and SalariedWorker. Every worker has a name, a salary rate, and the total salary he got so far from the beginning of his employment. Write a method  computePay(int hours) that computes the weekly pay for every worker. An hourly worker get paid the the hourly wage for the actual number of hours worked, of hours is at most 40. If the hourly worker worked more than 40 hours, the excess is paid at double rate. The salaried worker gets paid the hourly wage for 40 hours, no matter what the actual number of hours is. The total salary is just the accumulated value of all the paid salary for the worker. Beside the computePay() method, you can add more methods if you like or think necessary.
+
+After creating an array of Worker, I want to sort the array and print out the sorted result. By default, the workers are sorted by their name. You should also be able to sort it by their salary rate, or by the total salary they've got. This means if I use Arrays.sort(arrayname) directly, I'm sorting by name. Otherwise I sort by using different comparators. 
+
+When print out the information about the workers using System.out.println(worker), I wish to be able to see the worker's type too, i.e., whether he is HourlyWorker or SalariedWorker, and with his name, salary rate, and total salary. 
+
+Points
+20 pts: Correct class definition, class relationship 
+30 pts: The fields and methods inside are properly defined, and avoid duplicate coding 
+30 pts: The Arrays.sort() can perform sort correctly for all three different kind of sorting. 
+10 pts: Complete validity check. For example, you cannot have negative work hour 
+10 pts: For readability, proper comment, and any extra work you do. 
+
+--------------------------------------------------------------------------------
+
+What to submit
+You only need to submit your .java source code and README if you have one. If you put all your comments inside .java file, it's also fine to only submit the .java files. No .class files please. 
+
+¡¡

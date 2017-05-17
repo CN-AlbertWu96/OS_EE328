@@ -1,0 +1,81 @@
+Homework 1, Due
+Problem 1. 
+Description
+This program will create small, snake-like increment tables, up to 9x9 in size. It starts from 1, and the value keep increasing by one. For the first row, it increase from left to right; for the second row, it increase from right to left; the third row, from left to right, ... , etc.  Just like a snake. 
+Sample output is below:
+
+>java SnakeTable
+Enter table size 1-9, 0 to exit: 9
+	1       2        3         4       5         6        7        8        9
+        18      17      16      15      14      13      12      11      10
+        19      20      21      22      23      24      25      26      27
+        36      35      34      33      32      31      30      29      28
+        37      38      39      40      41      42      43      44      45
+        54      53      52      51      50      49      48      47      46
+        55      56      57      58      59      60      61      62      63
+        72      71      70      69      68      67      66      65      64
+        73      74      75      76      77      78      79      80      81 
+
+Enter table size 1-9, 0 to exit: 3
+	 1	 2	 3
+	 6	 5	 4
+	 7	 8	 9
+
+Enter table size 1-9, 0 to exit: 1
+	 1
+
+Enter table size 1-9, 0 to exit: 746
+please enter a number in the range 0-9
+
+Enter table size 1-9, 0 to exit: -231
+please enter a number in the range 0-9
+
+Enter table size 1-9, 0 to exit: 0
+      
+Specification
+The program should repeatedly request input in the range 0-9 (sample code to get console input is below). Numbers outside this range should be politely rejected. 0 will stop execution of the program. Numbers not parseable as integers should also cause the program to exit. 
+For input in the 1-9 range, the program should produce a multiplication table as shown above. The formatting does not have to precisely match the above, but the numbers should be in columns. You may use any combination of tabs and spaces for formatting. I would avoid Java's NumberFormatter classes for this one, but if you're feeling daring, go for it. 
+
+Points
+10 pts: Some semblance of a Java program, compiles 
+10 pts: Accepts integer input 
+20 pts: Prints out multiplication tables for 1-9, quits on 0, check the range bound 
+10 pts: Correctly formatted table 
+Getting Input
+Sample code for reading an integer from the console is in the Input.java file. You shouldn't use this java file directly, just use the part of getting input of it.   
+¡¡
+
+
+--------------------------------------------------------------------------------
+
+Problem 2.
+Description
+This problem is much more flexible, any reasonable implementation is acceptable. Please implement a class called MyDate which can represent a date. The class should have at least three int fields: year, month, day, and several methods to handle them.  Please make sure the values set to these fields are all valid. Pay attention to the special cases: some month can only 28/29 days, and some month can have 31 days. 
+
+Other the basic methods, there are two additional required methods:
+
+laterThan(MyDate date)
+
+      This method decides whether I am a later date than the passed-in parameter date, and return true or false. For example, if A is a MyDate object representing date 9/15/2004, and B representing date 9/22/2004, A.laterThan(B) should return false, while B.laterThan(A) should return true, and A.laterThan(A) should also return false.
+
+¡¡
+
+dayDifference(MyDate date1, MyDate date2)
+
+     This method should be a static method. It takes two dates and returns an integer indicating how many days are there between them. For example, the days between 9/15/2004 and 9/22/2004 is 7.  date2 shouldn't have to be larger (later) than date1, and you need to judge it yourself. 
+    Hint: you may try use previous method inside this method.
+
+¡¡
+
+To test the code, you can write you own main() function, or any other Class you want to. You can do console input, or hard-code the date creation inside your code is also fine here. The purpose of this assignment is just let you get familiar with class definition and manipulate with objects. 
+
+Points
+10 pts: Correct format of class definition, and can get compiled 
+10 pts: Complete validity check 
+20 pts: The two required methods are properly defined, and can return correct result 
+10 pts: For readability, proper comment, and any extra work you do. 
+
+--------------------------------------------------------------------------------
+
+What to submit
+You only need to submit your .java source code and README if you have one. If you put all your comments inside .java file, it's also fine to only submit the .java files. No .class files please. 

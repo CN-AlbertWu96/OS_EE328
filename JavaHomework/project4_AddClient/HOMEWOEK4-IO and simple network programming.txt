@@ -1,0 +1,51 @@
+Homework 4, due 
+This homework focuses on I/O and simple network programming
+
+Problem 1
+Description
+Write a pair of programs that will communicate over a socket, one called AddClient and one called AddServer. AddServer takes one command-line parameter, the port it should listen on. AddClient takes three command-line parameters: 
+the address of the server 
+the port of the server 
+a string to send to the server 
+Each run of AddClient will send one string to the server. 
+AddServer repeatedly listens for Strings from clients. When it hears one, it attempts to convert it to an int and add it to its counter (initially 0). If the conversion fails, it just waits for the next connection. If the received String equals "exit", AddServer prints the value of counter to the screen and exits. 
+
+Both programs can exit on errors (cleanly, with a message), but AddServer must tolerate NumberFormatExceptions (use try-catch block to handle it). 
+
+Format of addresses and ports: 
+
+The server will listen to a particular port on the machine where it's running. The client must connect to that port and machine combination. Thus, to test client and server, you need two command windows (if you're running on a local windows PC) or two separate terminal sessions to a remote machine (e.g. cunix). 
+If you are working on a local PC, and thus both client and server will running on the same machine, you can use "localhost" as the address or the IP address of that machine. Choose any random port number in the range 1025-65535, for example, 2222. Then you can run the programs with java AddServer 2222 and then java AddClient localhost 2222 
+If you are working on cunix, find the name of the machine where the server will run with the command uname -n. This may be, e.g. "walnut". So the sequence will be:
+>uname -n
+walnut
+>java AddServer 2222
+Then, in the other command window
+>java AddClient walnut 2222
+Or you can use ifconfig to find out the IP address of your machine, then replace "walnut" by the IP address. 
+Points
+10 pts: Correct basic class definition 
+20 pts: Server and Client can communicate with each other 
+10 pts: Works correctly, exit properly 
+10 pts: For readability, proper comment, and any extra work you do. 
+¡¡
+Problem 2
+Description
+Create a class WGet that takes a URL and a filename on the command line, and attempts to retrieve the data at that URL into the specified file. For example, "java WGet http://www.cs.columbia.edu/index.html myfile.html", then you are retrieving the file at CS website and store it into your own file myfile.html.  
+It should fail if the filename you are trying to write to is already existing, and fail with an informative message if something goes wrong (i.e. don't just dump a stack trace ).
+
+You can assume that the data is binary, i.e. don't worry about whether to use a Reader, just use an InputStream. You can also assume the file is text only. Just notify it in your code. 
+
+10 pts: Can compile, looks correct. 
+15 pts: Reads from remote URL correctly 
+15 pts: Writes to file correctly 
+10 pts: For readability, proper comment, and any extra work you do. 
+¡¡
+
+
+--------------------------------------------------------------------------------
+
+What to submit
+You only need to submit your .java source code and README if you have one. If you put all your comments inside .java file, it's also fine to only submit the .java files. No .class files please. 
+
+¡¡
